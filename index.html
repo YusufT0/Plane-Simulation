@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>City Simulator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="overlay">FPS: <span id="fpsCounter">0</span></div>
+  
+  <div id="cockpit-hud">
+    <div class="hud-container">
+      <div class="hud-section">
+        <div class="hud-panel">
+          <div class="hud-label">VELOCITY</div>
+          <div class="hud-value-container">
+            <div class="hud-value" id="velocity">0</div>
+            <div class="hud-unit">KM/H</div>
+          </div>
+          <div class="gauge-container">
+            <div class="gauge-bar" id="velocity-gauge"></div>
+          </div>
+        </div>
+        
+        <div class="hud-panel">
+          <div class="hud-label">FUEL</div>
+          <div class="hud-value-container">
+            <div class="hud-value" id="fuel">100</div>
+            <div class="hud-unit">%</div>
+          </div>
+          <div class="gauge-container">
+            <div class="gauge-bar" id="fuel-gauge"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hud-section">
+        <div class="hud-panel score-panel">
+          <div class="hud-label">SCORE</div>
+          <div class="hud-value-container">
+            <div class="hud-value large-value" id="score">0</div>
+          </div>
+        </div>
+        
+        <div class="hud-panel score-panel">
+          <div class="hud-label">BEST SCORE</div>
+          <div class="hud-value-container">
+            <div class="hud-value" id="best-score">0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hud-section">
+        <div class="hud-panel slider-panel">
+          <div class="hud-label">BRIGHTNESS</div>
+          <input type="range" min="0" max="100" value="50" class="hud-slider" id="throttle-slider">
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  
+  <canvas id="webgl-canvas"></canvas>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
